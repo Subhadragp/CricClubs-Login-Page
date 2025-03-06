@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <!-- logo -->
+  <div class="logo"><img src="images/cc_logo.png" alt=""></div>
+
+  <!-- login form -->
+  <form action="POST" id="login" method="post">
+    <div class="LoginContainer">
+      <h2>Login</h2>
+
+      <!-- user name -->
+      <div class="userName">
+        <label for="usName">User Name <span for="usName" id="usError" class="errorMess">* Enter User Name</span></label><br>
+      <Input type="text" id="usName" name="usName" placeholder="User Name..."><br></div>
+
+      <!-- password -->
+      <div class="password">
+        <label for="password">Password <span for="password" id="passError" class="errorMess">* Enter Password</span></label><br>
+      <input type="password" id="pass" name="password" placeholder="Password..."><br></div>
+
+      <!-- submit button -->
+      <button type="submit" id="SubmitLogin">Submit</button><br>
+
+      <!-- wrong credentials -->
+      <div>
+        <p  class="errorMess" id="wrong">** Invalid Credentials!</p>
+      </div>
+
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

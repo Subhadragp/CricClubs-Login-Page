@@ -1,0 +1,95 @@
+/* General Page Styling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffefe;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Container */
+.LoginContainer {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 60px;
+  margin-top: 20px;
+  height: 350px;
+  background-color: #fdfcfc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 450px;
+}
+
+/* Form Labels */
+label {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+/* Input Fields */
+input {
+  border: 2px solid #eeefee;
+  border-radius: 15px;
+  font-size: 14px;
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+/* Placeholder Text */
+input::placeholder {
+  color: black;
+  font-size: 14px;
+}
+
+/* Submit Button */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  padding: 12px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #003087;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #06225a;
+}
+
+/* Logo Container */
+.logo{
+  display: flex;
+  width: 300px;
+  justify-content: center;
+}
+
+/* logo image */
+.logo img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* error message */
+.errorMess{
+  color: red;
+  font-size: 13px;
+  font-weight: 600;
+  display: none;
+  margin-left: 10px;
+}
