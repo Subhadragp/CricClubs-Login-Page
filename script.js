@@ -29,7 +29,7 @@ document.getElementById("login").addEventListener("submit",function(event){
   // API calling
   loginApi(username,password)
   .then(response => {
-    if(response.token){
+    if(response.accessToken){
       setTimeout(() =>{
         window.location.href = "email.html";
       }, 2000);
@@ -41,20 +41,20 @@ document.getElementById("login").addEventListener("submit",function(event){
   .catch(error => console.error(error));
 });
 
-// // to erase the error msgs when we start typing something in the username
-// document.getElementById("usName").addEventListener("input", () => {
-//   document.getElementById("usError").style.display="none";
-//   document.getElementById("wrong").style.display="none";
-// });
+// to erase the error msgs when we start typing something in the username
+document.getElementById("usName").addEventListener("input", () => {
+  document.getElementById("usError").style.display="none";
+  document.getElementById("wrong").style.display="none";
+});
 
-// // to erase the error msgs when we start typing something in the password
-// document.getElementById("pass").addEventListener("input",() => {
-//   document.getElementById("passError").style.display="none";
-//   document.getElementById("wrong").style.display="none";
-// });
+// to erase the error msgs when we start typing something in the password
+document.getElementById("pass").addEventListener("input",() => {
+  document.getElementById("passError").style.display="none";
+  document.getElementById("wrong").style.display="none";
+});
 
 
-const API_URL= 'https://dummyjson.com/auth/login'
+const API_URL= "https://dummyjson.com/auth/login"
 
 // valid dummy credentials
 // "username": "emilys",
