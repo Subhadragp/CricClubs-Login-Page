@@ -1,3 +1,4 @@
+// checks the credentials only when the inputs are not empty and siaplays the error when inputs are empty
 document.getElementById("login").addEventListener("submit",function(event){
   event.preventDefault();
 
@@ -9,7 +10,7 @@ document.getElementById("login").addEventListener("submit",function(event){
 
   userror.style.display="none";
   passerror.style.display="none";
-  wrong.style.display-"none";
+  wrong.style.display="none";
 
   let isValid=true;
 
@@ -25,6 +26,7 @@ document.getElementById("login").addEventListener("submit",function(event){
 
   if(!isValid) return;
 
+  // API calling
   loginApi(username,password)
   .then(response => {
     if(response.token){
@@ -39,16 +41,34 @@ document.getElementById("login").addEventListener("submit",function(event){
   .catch(error => console.error(error));
 });
 
+// // to erase the error msgs when we start typing something in the username
+// document.getElementById("usName").addEventListener("input", () => {
+//   document.getElementById("usError").style.display="none";
+//   document.getElementById("wrong").style.display="none";
+// });
 
-const API_URL= 'https://reqres.in/api/login'
+// // to erase the error msgs when we start typing something in the password
+// document.getElementById("pass").addEventListener("input",() => {
+//   document.getElementById("passError").style.display="none";
+//   document.getElementById("wrong").style.display="none";
+// });
 
+
+const API_URL= 'https://dummyjson.com/auth/login'
+
+// valid dummy credentials
+// "username": "emilys",
+// "password": "emilyspass"
+
+
+// defining the REST API- POST
 function loginApi(username,password){
   return fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-type" : "application/json",
     },
-    body: JSON.stringify({ email:username, password:password})
+    body: JSON.stringify({ username:username, password:password }),
   })
   .then(async response => {
     const data = await response.json();
